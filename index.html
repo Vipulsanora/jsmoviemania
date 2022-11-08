@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMania</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+
+</head>
+<body>
+<header>
+    
+
+      <!-- search bar -->
+       <div>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand three" href="javascript:void(0)">Movie Mania</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item four">
+                    <a class="nav-link" href="javascript:void(0)">Home</a>
+                  </li>
+                  <li class="nav-item four">
+                    <a class="nav-link" href="javascript:void(0)">Movies</a>
+                  </li>
+                  <li class="nav-item four">
+                    <a class="nav-link" href="javascript:void(0)">Series</a>
+                  </li>
+                </ul>
+                <form id="srhmov" class="d-flex srhmov">
+                  <input class="form-control me-2" type="text" placeholder="Search Movies">
+                  <button class="btn btn-danger"  type="button">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          
+       </div>
+       <div class="row">
+        <div class="col-sm-9 one">
+          <ul>
+           <li>Stream</li>
+           <li>Events</li>
+           <li>Plays</li>
+           <li>Activities</li>
+           <li>Buzz</li>
+        </ul>
+        </div>
+        <div class="col-sm-3 one">
+            <ul>
+                <li>Corporates</li>
+                <li>Lists</li>
+                <li>Offers</li>
+                <li>Giftcards</li>
+                
+             </ul>
+        </div>
+      </div>
+
+</header>
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+     <div class="carousel-item">
+      <img src="thor.jpg" alt="thor" class="d-block">
+     </div>
+     <div class="carousel-item">
+      <img src="venom.jpg" alt="venom" class="d-block">
+     </div>
+     <div class="carousel-item active">
+      <img src="spideman.jpg" alt="spiderman" class="d-block">
+     </div>
+     <div class="carousel-item">
+      <img src="multiverse.jpg" alt="multiverse" class="d-block">
+     </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+   <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+   </button>
+</div>
+ <div id="boxy">
+      <div id="six">
+        <h1>Movies To Watch</h1>
+      </div>
+
+      <!-- movie list -->
+
+      <div>
+        <div class="container mt-3">
+            
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th><h3> Movie Name</h3></th>
+                <th ><h3> Release Date</h3></th>
+                <th></th>
+            
+              </tr>
+            </thead>
+            <div id="movlist">
+            <tbody id="mytab">
+              <tr>
+                <td>Multiverse of Madness</td>
+                <td>2022</td>
+                <td><button class="btn btn-danger two" onclick="remove_tr()">Delete</button></td>
+                
+              </tr>
+              <tr>
+                <td>Venom: Let There Be Carnage</td>
+                <td>2021</td>
+                <td><button class="btn btn-danger two" onclick="remove_tr()">Delete</button></td>
+                
+              </tr>
+              <tr>
+                <td>Spiderman: No way Home</td>
+                <td>2021</td>
+                <td><button class="btn btn-danger two " onclick="remove_tr()">Delete</button></td>
+                
+              </tr>
+              <tr>
+                <td>Thor: Love and Thunder</td>
+                <td>2021</td>
+                <td><button class="btn btn-danger two " onclick="remove_tr()">Delete</button></td>
+                
+              </tr>
+            </tbody>
+          </div>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- add movie -->
+
+      <div id="seven">
+        <form id="nine" >
+          <label for="invisible">Hide Above List</label>
+          <input type="checkbox" id="invisible">
+          <br>
+          <input type="text" id="website" name="website" placeholder="Add Movie Name" />
+          <input type="number" id="num" name="num" placeholder=" Add Release date" />
+           <button class="btn btn-danger">Add</button>
+
+        </form>
+      </div>
+      
+ </div>
+   <script src="style.js"> </script>
+   
+</body>
+</html>
